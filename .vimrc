@@ -32,4 +32,6 @@ xmap ib <Plug>CamelCaseMotion_ib
 omap ie <Plug>CamelCaseMotion_ie
 xmap ie <Plug>CamelCaseMotion_ie
 
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
 call pathogen#infect()
