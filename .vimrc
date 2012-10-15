@@ -1,4 +1,3 @@
-
 let mapleader=","
 syntax on
 filetype on
@@ -18,6 +17,10 @@ set ruler
 set hidden
 set smartcase
 set noerrorbells
+
+set expandtab
+set tabstop=4
+set shiftwidth=4
 
 map w <Plug>CamelCaseMotion_w
 map b <Plug>CamelCaseMotion_b
