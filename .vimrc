@@ -19,8 +19,8 @@ set smartcase
 set noerrorbells
 
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 map w <Plug>CamelCaseMotion_w
 map b <Plug>CamelCaseMotion_b
