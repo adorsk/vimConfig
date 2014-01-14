@@ -38,5 +38,3 @@ xmap ie <Plug>CamelCaseMotion_ie
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
 call pathogen#infect()
-
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
