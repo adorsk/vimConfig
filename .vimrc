@@ -37,4 +37,6 @@ xmap ie <Plug>CamelCaseMotion_ie
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
+runtime macros/matchit.vim
+
 call pathogen#infect()
