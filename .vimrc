@@ -4,6 +4,8 @@ filetype on
 filetype indent on
 filetype plugin on
 
+runtime macros/matchit.vim
+
 set viminfo='100,f1
 set nobackup
 set nowritebackup
@@ -36,7 +38,5 @@ omap ie <Plug>CamelCaseMotion_ie
 xmap ie <Plug>CamelCaseMotion_ie
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
-
-runtime macros/matchit.vim
 
 call pathogen#infect()
