@@ -4,6 +4,9 @@ filetype on
 filetype indent on
 filetype plugin on
 
+set encoding=utf-8
+set fileencoding=utf-8
+
 runtime macros/matchit.vim
 
 set viminfo='100,f1
@@ -36,6 +39,8 @@ omap ib <Plug>CamelCaseMotion_ib
 xmap ib <Plug>CamelCaseMotion_ib
 omap ie <Plug>CamelCaseMotion_ie
 xmap ie <Plug>CamelCaseMotion_ie
+
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
