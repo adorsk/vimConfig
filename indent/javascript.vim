@@ -1,6 +1,6 @@
 setlocal expandtab
-setlocal tabstop=4
-setlocal shiftwidth=4
+setlocal tabstop=2
+setlocal shiftwidth=2
 
 " Author: 		Preston Koprivica (pkopriv2@gmail.com)	
 " URL:

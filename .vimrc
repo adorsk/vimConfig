@@ -4,6 +4,8 @@ filetype on
 filetype indent on
 filetype plugin on
 
+set clipboard=unnamed
+
 set encoding=utf-8
 set fileencoding=utf-8
 
@@ -24,8 +26,8 @@ set smartcase
 set noerrorbells
 
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 
 map w <Plug>CamelCaseMotion_w
 map b <Plug>CamelCaseMotion_b
