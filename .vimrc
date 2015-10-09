@@ -46,4 +46,8 @@ xmap ie <Plug>CamelCaseMotion_ie
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
+set regexpengine=1
+syntax enable
+let b:javascript_fold = 0
+
 call pathogen#infect()
