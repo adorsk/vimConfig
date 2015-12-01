@@ -44,10 +44,15 @@ xmap ie <Plug>CamelCaseMotion_ie
 
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
-autocmd BufNewFile,BufRead *.json set ft=javascript
+set omnifunc=syntaxcomplete#Complete
+set completeopt-=preview
+let g:ycm_add_preview_to_complete = 0
 
 set regexpengine=1
 syntax enable
 let b:javascript_fold = 0
+
+autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd FileType javascript setlocal omnifunc=tern#Complete
 
 call pathogen#infect()
