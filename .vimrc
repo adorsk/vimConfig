@@ -55,5 +55,6 @@ let b:javascript_fold = 0
 autocmd BufNewFile,BufRead *.json set ft=javascript
 
 set diffopt+=vertical
+set number
 
 call pathogen#infect()
