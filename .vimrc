@@ -53,7 +53,10 @@ syntax enable
 let b:javascript_fold = 0
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
-autocmd FileType javascript setlocal omnifunc=tern#Complete
+
+set diffopt+=vertical
+
+set relativenumber
 
 set diffopt+=vertical
 
