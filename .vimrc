@@ -40,6 +40,7 @@ syntax enable
 let b:javascript_fold = 0
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufRead *.es6 set ft=javascript
 
 set diffopt+=vertical
 
