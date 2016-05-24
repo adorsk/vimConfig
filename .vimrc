@@ -46,4 +46,7 @@ set diffopt+=vertical
 
 set relativenumber
 
+set diffopt+=vertical
+
 call pathogen#infect()
+
