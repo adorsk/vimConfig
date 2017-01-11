@@ -79,6 +79,8 @@ set statusline+=%*
 autocmd BufNewFile,BufRead *.es6 set ft=javascript
 let g:jsx_ext_required = 0
 
+let g:vim_json_syntax_conceal = 0
+
 set diffopt+=vertical
 
 set relativenumber
