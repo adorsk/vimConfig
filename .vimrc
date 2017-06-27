@@ -12,7 +12,6 @@ Plugin 'elzr/vim-json'
 Plugin 'ervandew/supertab'
 Plugin 'henrik/vim-indexed-search'
 Plugin 'pangloss/vim-javascript'
-Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -51,7 +50,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
-; colors
+" colors
 let g:solarized_termcolors=256
 set background=dark
 set colorcolumn=81
