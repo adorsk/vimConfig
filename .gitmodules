@@ -55,3 +55,6 @@
 [submodule "bundle/vim-json"]
 	path = bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule "bundles/pydoc"]
+	path = bundles/pydoc
+	url = https://github.com/fs111/pydoc.vim.git
