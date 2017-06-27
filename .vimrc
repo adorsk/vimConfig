@@ -1,13 +1,35 @@
+set nocompatible
+filetype off
+
+" vundle config
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'elzr/vim-json'
+Plugin 'ervandew/supertab'
+Plugin 'henrik/vim-indexed-search'
+Plugin 'pangloss/vim-javascript'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'vim-syntastic/syntastic'
+
+call vundle#end()
+
 let mapleader=","
 syntax on
-filetype on
+set encoding=utf-8
+set fileencoding=utf-8
+
 filetype indent on
 filetype plugin on
 
 set clipboard=unnamed
-
-set encoding=utf-8
-set fileencoding=utf-8
 
 runtime macros/matchit.vim
 
@@ -29,6 +51,9 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 
+; colors
+let g:solarized_termcolors=256
+set background=dark
 set colorcolumn=81
 highlight ColorColumn ctermbg=8
 
@@ -38,27 +63,22 @@ call pathogen#infect()
 
 set omnifunc=syntaxcomplete#Complete
 set completeopt-=preview
-let g:ycm_add_preview_to_complete = 0
-let g:ycm_path_to_python_interpreter = '/usr/bin/python'
 
 set regexpengine=1
 syntax enable
 let b:javascript_fold = 0
 
+" status line
 set laststatus=2
 set statusline=%.20F       "filename
-"set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
-"set statusline+=%{&ff}] "file format
-"set statusline+=%h      "help file flag
 set statusline+=%r      "read only flag
 set statusline+=%m      "modified flag
-"set statusline+=%y      "filetype
 set statusline+=%=      "left/right separator
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 
-
+" syntastic
 let g:syntastic_mode_map = { 'mode': 'active',
                             \ 'active_filetypes': ['python', 'javascript'],
                             \ 'passive_filetypes': [] }
@@ -75,19 +95,6 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-
-autocmd BufNewFile,BufRead *.es6 set ft=javascript
-let g:jsx_ext_required = 0
-
-let g:vim_json_syntax_conceal = 0
-
 set diffopt+=vertical
-
 set relativenumber
-
-set diffopt+=vertical
-
-let g:solarized_termcolors=256
-set background=dark
-
 :set mouse-=a
