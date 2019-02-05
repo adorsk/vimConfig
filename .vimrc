@@ -5,22 +5,17 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'Rykka/InstantRst'
-Plugin 'Rykka/riv.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'davidhalter/jedi-vim'
 Plugin 'elzr/vim-json'
-Plugin 'ervandew/supertab'
 Plugin 'henrik/vim-indexed-search'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'vim-syntastic/syntastic'
-
+Plugin 'majutsushi/tagbar'
+Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'w0rp/ale'
 call vundle#end()
 
 let mapleader=","
@@ -44,6 +39,7 @@ set pastetoggle=<F2>
 set wildmode=longest,list
 set wildmenu
 set autochdir
+autocmd VimEnter * set autochdir
 set ruler
 set hidden
 set smartcase
@@ -80,23 +76,14 @@ set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
 
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_mode_map = { 'mode': 'active',
-                            \ 'active_filetypes': ['python', 'javascript'],
-                            \ 'passive_filetypes': [] }
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_loc_list_height = 2
-let g:syntastic_javascript_checkers = ['eslint']
-let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
-let b:syntastic_javascript_eslint_exec = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-let g:syntastic_python_checkers = ['pyflakes']
-let g:syntastic_rst_checkers = ['syntastic-rst-sphinx']
+"ALE config
+nmap <silent> <leader>aj :ALENext<cr>
+nmap <silent> <leader>ak :ALEPrevious<cr>
+nmap <silent> <leader>af :ALEFix<cr>
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier-eslint']
 
 set diffopt+=vertical
 set relativenumber
@@ -104,4 +91,5 @@ set relativenumber
 
 set foldlevelstart=99
 
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
