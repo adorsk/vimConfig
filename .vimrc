@@ -1,22 +1,20 @@
 set nocompatible
 filetype off
 
-" vundle config
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'elzr/vim-json'
-Plugin 'henrik/vim-indexed-search'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'tpope/vim-abolish'
-Plugin 'majutsushi/tagbar'
-Plugin 'severin-lemaignan/vim-minimap'
-Plugin 'w0rp/ale'
-call vundle#end()
+" plug config
+call plug#begin('~/.vim/plugged')
+Plug 'altercation/vim-colors-solarized'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'elzr/vim-json'
+Plug 'henrik/vim-indexed-search'
+Plug 'scrooloose/nerdcommenter'
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'tpope/vim-abolish'
+Plug 'majutsushi/tagbar'
+Plug 'severin-lemaignan/vim-minimap'
+Plug 'w0rp/ale'
+call plug#end()
 
 let mapleader=","
 syntax on
@@ -91,5 +89,8 @@ set relativenumber
 
 set foldlevelstart=99
 
+set backspace=indent,eol,start
+
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 
